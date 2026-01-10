@@ -1,0 +1,7 @@
+set(LNA_PUBLIC_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../include")
+
+set(LNA_SOURCES
+  "${CMAKE_CURRENT_LIST_DIR}/../src/lna_arena.c"
+  "${CMAKE_CURRENT_LIST_DIR}/../src/lna_primitive.c"
+  "${CMAKE_CURRENT_LIST_DIR}/../src/equation.c"
+)

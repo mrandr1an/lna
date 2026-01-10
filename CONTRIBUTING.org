@@ -1,0 +1,27 @@
+#+title: CONTRIBUTING
+
+* Motivation
+* Contributing to ...
+** Core
+** Tests
+*** Desktop
+*** ESP32
+** Examples
+*** Desktop
+*** ESP32
+** Benchmarks
+*** Desktop
+** Documentation
+[[https://www.doxygen.nl/][Doxygen]] is set-up for code-documentation generation. To build the docs:
+
+#+begin_src bash
+  cmake -S . -B build -DLNA_BUILD_DOCS=ON
+  cmake --build build --target docs
+#+end_src
+
+The default variables are very strict so after building just check for
+the keyword "undocumented" on the output the above commands to find
+undocumented code.
+
+Make sure to have a good LSP set-up to easilly navigate between
+prototypes (definitions) and implementations.

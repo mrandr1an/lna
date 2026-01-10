@@ -1,0 +1,5 @@
+set(LNA_PUBLIC_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../include")
+
+set(LNA_SOURCES
+  "${CMAKE_CURRENT_LIST_DIR}/../src/hello.c"
+)

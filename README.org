@@ -1,0 +1,38 @@
+#+TITLE: LnA
+#+SUBTITLE: Linear Algebra for every machine
+
+* Description
+LnA (Linear Algebra) is a library that implements various mathematical operations
+designed for but not limited to, machine learning models. It's design
+aims to:
+
+- Compile && Run in constrained devices. 
+- Adhere by the C11 standard so as many devices as possible support it.
+- Be easilly generatable as raw C by an external ml-compiler.
+
+* Usage
+
+** Running Examples
+To compile and run examples on desktop:
+#+begin_src bash
+  cmake -S . -B build -DLNA_BUILD_EXAMPLES=ON
+  cmake --build build
+  ./build/examples/$(EXAMPLE)
+#+end_src
+** Running Tests
+To compile and run tests on desktop:
+#+begin_src bash
+  cmake -S . -B build -DLNA_BUILD_TESTS=ON
+  cmake --build build
+  ctest --test-dir build --output-on-failure
+#+end_src
+** Running benchmarks
+To compile and run benchmarks on desktop:
+#+begin_src bash
+  cmake -S . -B build -DBUILD_BENCHMARKS=ON
+  cmake --build build --target $(BENCH)
+  ./build/bench/$(BENCH)
+#+end_src
+* Contributing
+
+Check [[file:CONTRIBUTING.org][CONTRIBUTING.org]] for the structure of the library.

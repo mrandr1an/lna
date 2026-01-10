@@ -1,0 +1,15 @@
+#include <benchmark/benchmark.h>
+
+extern "C" {
+#include "hello.h"
+}
+
+static void BM_hello(benchmark::State& state) {
+  for (auto _ : state) {
+    hello();
+    benchmark::DoNotOptimize(0); // minimal "barrier"; see note below
+  }
+}
+BENCHMARK(BM_hello);
+
+BENCHMARK_MAIN();
