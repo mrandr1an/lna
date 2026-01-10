@@ -1,4 +1,0 @@
-version: "0.1.0"
-description: "My ESP-IDF component"
-dependencies:
-  idf: ">=5.0"
